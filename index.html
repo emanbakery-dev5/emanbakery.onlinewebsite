@@ -1,5 +1,177 @@
 <!DOCTYPE html>
-<html>
-<head><title>EmanBakery Legal Directory</title></head>
-<body><h1>EmanBakery Compliance Portal Portal</h1></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmanBakery Legal Operations Center</title>
+    <style>
+        :root {
+            --primary: #d97706;
+            --primary-hover: #b45309;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --bg-body: #f9fafb;
+            --bg-card: #ffffff;
+            --border: #e5e7eb;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        header {
+            background: #111827;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+        header p { color: #9ca3af; font-size: 0.95rem; }
+        .tabs {
+            display: flex;
+            background: #f3f4f6;
+            border-bottom: 1px solid var(--border);
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 15px 10px;
+            border: none;
+            background: transparent;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .tab-btn:hover { background: #eaeded; color: var(--text-main); }
+        .tab-btn.active {
+            background: var(--bg-card);
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+        }
+        .content-section { display: none; padding: 40px; }
+        .content-section.active { display: block; }
+        h2 { color: #111827; margin: 25px 0 15px 0; font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        h2:first-of-type { margin-top: 0; }
+        p { margin-bottom: 15px; color: var(--text-main); }
+        ul, ol { margin-bottom: 20px; padding-left: 20px; color: var(--text-main); }
+        li { margin-bottom: 8px; }
+        .highlight-box {
+            background: #fdf8f2;
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: #9ca3af;
+            background: #f9fafb;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>EmanBakery Online</h1>
+        <p>Compliance, Terms & Data Operations Center</p>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('privacy')">Privacy Policy</button>
+        <button class="tab-btn" onclick="openTab('terms')">Terms of Service</button>
+        <button class="tab-btn" onclick="openTab('deletion')">Data Deletion</button>
+    </div>
+
+    <!-- PRIVACY POLICY PANEL -->
+    <div id="privacy" class="content-section active">
+        <p><strong>Last Updated: July 8, 2026</strong></p>
+        <p>EmanBakery Online ("we," "our," or "us") operates private automated utility integrations using Meta WhatsApp Cloud APIs to optimize internal logistics. This document clarifies our handling of communication metadata.</p>
+        
+        <h2>1. Data Minimization Protocol</h2>
+        <div class="highlight-box">
+            Our API automation systems run strictly as automated message routing proxies. We never store, read, or track any chat conversations passing through our system endpoints.
+        </div>
+        
+        <h2>2. Data Processing & Security</h2>
+        <p>Any data received via Meta APIs is parsed strictly in temporary memory to answer instant system queries (like checking Muqeem lists) and is erased immediately. Your business data remains fully isolated inside your private infrastructure.</p>
+        
+        <h2>3. External Infrastructure</h2>
+        <p>Data packets travel across secure channels maintained by Meta Platforms Inc. and Hookdeck. We recommend checking their official guidelines for details on transit-layer security safeguards.</p>
+    </div>
+
+    <!-- TERMS OF SERVICE PANEL -->
+    <div id="terms" class="content-section">
+        <p><strong>Last Updated: July 8, 2026</strong></p>
+        <p>By accessing or interacting with our custom WhatsApp bot infrastructure or automated data routing configurations, you agree to these operating terms.</p>
+        
+        <h2>1. Internal Permitted Use</h2>
+        <p>This software platform, dashboard connection, and webhook routing matrix are provided solely for internal administrative use. External access or attempts to feed outside data into our systems is strictly prohibited.</p>
+        
+        <h2>2. System Availability & Liability</h2>
+        <p>We provide these automation shortcuts on an "as-is" basis. We are not responsible for message delivery delays, Meta platform downtime, or temporary web hosting drops.</p>
+        
+        <h2>3. Data Accuracy</h2>
+        <p>Internal users are individually responsible for keeping their linked profiles and database entries updated and holding system secret keys securely inside protected environment variables.</p>
+    </div>
+
+    <!-- DATA DELETION PANEL -->
+    <div id="deletion" class="content-section">
+        <h2>Data Deletion Instructions (Callback Protocol)</h2>
+        <p>In compliance with Meta Developer Guidelines, we provide a clear method for users to remove their profile connections from our applications.</p>
+        
+        <div class="highlight-box">
+            Because our gateway operates completely stateless, we do not save any permanent records, user contact rosters, or historic chat metadata. As a result, there is no permanent data database to wipe clean.
+        </div>
+        
+        <p>If you want to disconnect your Meta profile or communication assets from our internal system paths entirely, please follow these steps:</p>
+        
+        <ol>
+            <li>Go to your Facebook Profile settings and click on <strong>Apps and Websites</strong>.</li>
+            <li>Locate the application named <strong>WB</strong>.</li>
+            <li>Click the <strong>Remove</strong> button next to the application entry.</li>
+            <li>To request immediate manual verification that your number is cleared from transient memory routers, send an email to: <strong>info@emanbakery.online</strong>.</li>
+        </ol>
+    </div>
+
+    <footer>
+        &copy; 2026 EmanBakery Online. All rights reserved. System Compliance Matrix.
+    </footer>
+</div>
+
+<script>
+    function openTab(tabId) {
+        // Hide all sections
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => section.classList.remove('active'));
+        
+        // Remove active styling from all buttons
+        const buttons = document.querySelectorAll('.tab-btn');
+        buttons.forEach(btn => btn.classList.remove('active'));
+        
+        // Show selected section and activate clicked button
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+
+</body>
 </html>
